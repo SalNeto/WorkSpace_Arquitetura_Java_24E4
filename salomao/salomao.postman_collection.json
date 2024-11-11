@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "d00282ce-a5a2-4a82-9305-4750d42d7f32",
+		"name": "salomao",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31614652",
+		"_collection_link": "https://www.postman.com/avionics-pilot-11981212/instituto-infnet/collection/sc2chb1/salomao?action=share&source=collection_link&creator=31614652"
+	},
+	"item": [
+		{
+			"name": "comerciante",
+			"item": [
+				{
+					"name": "obterLista",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/comerciantees",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comerciantees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"paulinho\",\r\n    \"cpf\": \"345345345345\",\r\n    \"email\": \"paulinh@nasser.com\",\r\n    \"endereco\": {\r\n        \"cep\": \"01001-000\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/comerciantees/incluir",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comerciantees",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/comerciantees/2/excluir",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comerciantees",
+								"2",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obterPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/comerciantees/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comerciantees",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorNome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/comerciantees/buscar/nasser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comerciantees",
+								"buscar",
+								"nasser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mercadoria",
+			"item": [
+				{
+					"name": "filtrarPorPreco",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mercadorias/filtrarPorPreco?min=10&max=30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadorias",
+								"filtrarPorPreco"
+							],
+							"query": [
+								{
+									"key": "min",
+									"value": "10"
+								},
+								{
+									"key": "max",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/mercadoria/2/excluir",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadoria",
+								"2",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obterPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/mercadoria/123",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadoria",
+								"123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obterLista",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/lista/mercadoria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lista",
+								"mercadoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterarPreco",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/mercadorias/alterar?id=123&preco=999",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mercadorias",
+								"alterar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "123"
+								},
+								{
+									"key": "preco",
+									"value": "999"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "souvenir",
+			"item": [
+				{
+					"name": "incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\t\"descricao\": \"sopa\",\r\n\t\t\"codigo\": 5,\r\n\t\t\"preco\": 10,\r\n\t\t\"estoque\": true,\r\n\t\t\"organico\": true,\r\n\t\t\"caracteristica\": \"sopão\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/souvenirs/incluir",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"souvenirs",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obterLista",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/souvenirs",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"souvenirs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"descricao\": \"new coca-cola\",\r\n    \"codigo\": 1,\r\n    \"preco\": 10.0,\r\n    \"estoque\": false,\r\n    \"organico\": false,\r\n    \"caracteristica\": \"new normal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/souvenirs/alterar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"souvenirs",
+								"alterar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "brinquedos",
+			"item": [
+				{
+					"name": "obterLista",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/lista/brinquedos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lista",
+								"brinquedos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\": \"geladeira\",\r\n    \"codigo\": 5,\r\n    \"preco\": 390.0,\r\n    \"estoque\": true,\r\n    \"marca\": \"gelada\",\r\n    \"garantiaMeses\": 24\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/brinquedos/incluir",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"brinquedos",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
